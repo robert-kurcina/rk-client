@@ -3,24 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  state = {users: []}
-
-  componentDidMount() {
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
-  }
-
-  render() {
+  render (){
     return (
       <div className="App">
-        <img src={logo}/>
-        <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
+        <img src={logo} className="App-logo"/>
       </div>
-    );
+    )
   }
 }
 
